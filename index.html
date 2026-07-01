@@ -3,41 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Martin | SOC & Cybersecurity Portfolio</title>
     <style>
-        /* Base styles matching the layout directly */
+        /* Modern Reset and Base Design */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
         body {
-            background-color: #2563eb; /* Strong solid blue background */
-            font-family: Arial, sans-serif;
+            background-color: #2563eb; /* Vibrant solid blue */
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            min-height: 100vh;
+            padding: 40px 20px;
         }
 
-        /* Pure white container box */
-        .card {
-            background-color: white;
-            border-radius: 12px;
-            padding: 30px;
-            width: 380px;
+        /* Main Unified Card Container */
+        .portfolio-card {
+            background-color: #ffffff;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 450px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
-        /* Circle placeholder layout for user image upload */
+        /* Avatar Box styling */
         .avatar-container {
-            width: 90px;
-            height: 90px;
-            background-color: #e2e8f0;
+            width: 110px;
+            height: 110px;
+            background-color: #f1f5f9;
             border-radius: 50%;
-            margin: 0 auto 15px auto;
+            margin: 0 auto 20px auto;
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
+            border: 3px solid #e2e8f0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         }
 
         .avatar-container img {
@@ -46,98 +54,247 @@
             object-fit: cover;
         }
 
-        /* Typography matches structural sizing from image layout */
+        /* Typography Styling */
         h1 {
-            font-size: 24px;
-            color: #000000;
-            margin: 0 0 8px 0;
-            font-weight: bold;
+            font-size: 26px;
+            color: #0f172a;
+            margin-bottom: 6px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
-        p {
+        .cyber-bio {
             font-size: 14px;
             color: #64748b;
-            margin: 0 0 20px 0;
-            line-height: 1.4;
+            margin-bottom: 24px;
+            line-height: 1.5;
+            padding: 0 10px;
         }
 
-        /* Large blue primary click button */
-        .btn {
-            display: block;
-            width: 100%;
-            background-color: #2563eb;
-            color: white;
-            text-decoration: none;
-            padding: 12px 0;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: bold;
-            margin-bottom: 20px;
+        /* Link Box Layout */
+        .link-box {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 12px;
+            margin-bottom: 30px;
         }
 
-        /* Tiny link block alignment */
         .footer-text {
-            font-size: 12px;
+            font-size: 11px;
             color: #94a3b8;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
             margin-bottom: 4px;
         }
 
         .link {
             font-size: 13px;
             color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .link:hover {
             text-decoration: underline;
+        }
+
+        /* Beautiful Modern Form Elements */
+        form {
+            text-align: left;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 30px;
+        }
+
+        .form-heading {
+            font-size: 16px;
+            color: #0f172a;
+            font-weight: 600;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            font-size: 12px;
+            color: #475569;
+            font-weight: 600;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            background-color: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #0f172a;
+            transition: all 0.2s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+
+        /* Modern Custom File Upload Wrapper */
+        .file-upload-wrapper {
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+        /* Checkbox Container Alignment */
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .checkbox-container input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            accent-color: #2563eb;
+            cursor: pointer;
+        }
+
+        .checkbox-container label {
+            margin-bottom: 0;
+            cursor: pointer;
+            text-transform: none;
+            font-weight: 500;
+            color: #64748b;
+        }
+
+        /* Core Actions Buttons block */
+        .action-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: block;
+            padding: 14px 0;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            text-align: center;
+        }
+
+        .btn-submit {
+            background-color: #2563eb;
+            color: white;
+            flex: 2;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+        }
+
+        .btn-submit:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+        .btn-reset {
+            background-color: #f1f5f9;
+            color: #64748b;
+            flex: 1;
+        }
+
+        .btn-reset:hover {
+            background-color: #e2e8f0;
+            color: #0f172a;
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
+    <div class="portfolio-card">
+        <!-- Profile Section -->
         <div class="avatar-container">
-            <!-- Points cleanly to your uploaded file -->
             <img src="photo.png" alt="Martin">
         </div>
         
         <h1>Martin</h1>
-        <p>Cybersecurity Developer passionate about building edr and Analyze in siem ex: kql.</p>
+        <p class="cyber-bio">Cybersecurity Developer passionate about building EDR tools and conducting analysis in SIEM environments (e.g., KQL).</p>
         
-        <a href="mailto:marinesp32dev@gmail.com" class="btn">Contact Me</a>
+        <!-- Links Section -->
+        <div class="link-box">
+            <div class="footer-text">Favorite Website</div>
+            <a href="https://moodlelearning.moodiy.club/login/index.php" target="_blank" rel="noopener noreferrer" class="link">
+                I love to train on this website as a SOC analyst
+            </a>
+        </div>
         
-        <div class="footer-text">Favorite Website</div>
-        <a href="https://moodlelearning.moodiy.club/login/index.php" class="link target="_blank" rel="noopener noreferrer">i love to train in this website as soc</a>
+        <!-- Integrated Beautiful Contact Form -->
+        <form action="https://formspree.io" method="POST" enctype="multipart/form-data">
+            <div class="form-heading">Connect With Me</div>
 
+            <fieldset>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                </div>
 
-    </div><br><br>
-     <form action="#" method="POST">
-      <fieldset class="information">
-        <label for="email"> email</label>
-        <input type="email" id="email" name="email" required /><br />
-        <fieldset class="country">
-          <label for="country">Country</label>
-          <select id="country" name="country">
-            <option value="">-- Select a country --</option>
-            <!-- empty default -->
-            <option value="eg">Egypt</option>
-            <option value="sa">Saudi Arabia</option>
-            <option value="ae">United Arab Emirates</option>
-            <option value="jo">Jordan</option></select
-          ><br />
-          <label for="date">date to meet</label>
-          <input type="date" id="date" name="date" required /><br />
-          <label for="file"> submit the company cv</label>
-          <input type="file" id="file" name="cv" required /><br />
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                        <option value="">-- Select a country --</option>
+                        <option value="eg">Egypt</option>
+                        <option value="sa">Saudi Arabia</option>
+                        <option value="ae">United Arab Emirates</option>
+                        <option value="jo">Jordan</option>
+                    </select>
+                </div>
 
-          <input type="checkbox" name="terms" id="agree" required />
-          <label for="agree">accept terms</label>
-        </fieldset>
-        <label for="message">Your Message</label>
-        <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
-      </fieldset>
-     
-      <button type="submit" id="button">Contact Me</button>
-      <button type="reset" id="reset" onclick="alert('form cleared!')">Clear Form</button></form><br>
+                <div class="form-group">
+                    <label for="date">Date to Meet</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
 
-  </body>
-</html>
+                <div class="form-group">
+                    <label for="file">Submit Company CV</label>
+                    <input type="file" id="file" name="cv" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
+                </div>
+
+                <div class="checkbox-container">
+                    <input type="checkbox" name="terms" id="agree" required>
+                    <label for="agree">I accept the terms & conditions</label>
+                </div>
+            </fieldset>
+         
+            <div class="action-buttons">
+                <button type="submit" class="btn btn-submit">Contact Me</button>
+                <button type="reset" class="btn btn-reset" onclick="alert('Form cleared successfully!')">Clear</button>
+            </div>
+        </form>
+    </div>
 
 </body>
 </html>
