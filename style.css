@@ -1,69 +1,279 @@
+/* Universal Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-  background-color: lightseagreen;
-  font-family: georgia;
-  text-align: center;
-  height: 33;
-  font-size: large;
-  height: 73;
-  line-height: 1.6;
-}
-#title {
-  font-weight: 700;
-  font-size: 35px;
-  margin-bottom: 44px;
-}
-.description {
-  text-align: center;
-  line-height: 1.6;
-  color: rgb(42, 118, 165);
-
-  padding: 20px 20px;
-  margin-bottom: 44px;
-  padding: 20px;
-  border-radius: 8px;
-}
-#button {
-  text-decoration: none;
-  color: rgb(111, 32, 32);
-  border-radius: 8px;
-  font-weight: 700;
-  border: 10px solid rgb(73, 156, 156);
-  background-color: rgb(168, 188, 93);
-  padding: 10px 20px;
-  border-bottom-right-radius: 70%;
-  box-shadow: 0 22px 77px rgb(148, 217, 148);
-  font-size: large;
-}
-img {
-  border-radius: 80%;
-  width: 400px;
-}
-a {
-  color: bisque;
-  font-size: small;
-  text-decoration-style: wavy;
-}
-video {
-  width: 607px;
-}
-.information {
-  color: rgb(62, 62, 97);
-  background-color: lightgray;
-  text-decoration: underline;
-  font-weight: 700;
-}
-.scores {
-  background-color: bisque;
-  text-align: center;
-  align-content: center;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.6;
 }
 
-#reset {
-  border-radius: 44px;
-  background-color: blue;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Typography & Visual Anchors */
+h1, h2, h3 {
+    color: #f8fafc;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #38bdf8;
+    border-radius: 2px;
+}
+
+.highlight {
+    color: #38bdf8;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.primary-btn {
+    background-color: #38bdf8;
+    color: #0f172a;
+}
+
+.primary-btn:hover {
+    background-color: #0ea5e9;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: #38bdf8;
+    border: 2px solid #38bdf8;
+    margin-left: 15px;
+}
+
+.secondary-btn:hover {
+    background-color: rgba(56, 189, 248, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    text-align: center;
+    padding: 100px 0;
+    border-bottom: 1px solid #334155;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #94a3b8;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.bio {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1rem;
+    color: #cbd5e1;
+}
+
+/* Academics Table */
+.academics-section {
+    background-color: #1e293b;
+    padding: 60px 0;
+}
+
+.table-wrapper {
+    margin-top: 30px;
+    overflow-x: auto;
+}
+
+.grades-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #0f172a;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.grades-table th, .grades-table td {
+    padding: 16px 20px;
+    text-align: left;
+}
+
+.grades-table th {
+    background-color: #334155;
+    color: #38bdf8;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.grades-table tr {
+    border-bottom: 1px solid #1e293b;
+}
+
+.grades-table tr:last-child {
+    border-bottom: none;
+}
+
+.grade-avg {
+    color: #4ade80;
+    font-weight: bold;
+}
+
+/* Contact Form */
+.contact-section {
+    padding: 60px 0;
+}
+
+.section-desc {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 40px;
+}
+
+.portfolio-form {
+    background-color: #1e293b;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    color: #f8fafc;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.form-checkbox label {
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.submit-btn {
+    background-color: #38bdf8;
+    color: #0f172a;
+    flex: 2;
+}
+
+.submit-btn:hover {
+    background-color: #0ea5e9;
+}
+
+.reset-btn {
+    background-color: #475569;
+    color: #f8fafc;
+    flex: 1;
+}
+
+.reset-btn:hover {
+    background-color: #334155;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #1e293b;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* Tablet & Mobile Layout Shifts */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .form-actions {
+        flex-direction: column;
+    }
 }
