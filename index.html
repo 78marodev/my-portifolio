@@ -3,105 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed | Cybersecurity & Web Developer Portfolio</title>
+    <title>Martin | Cybersecurity Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="container">
-            <h1>Hi, I'm <span class="highlight">Ahmed</span></h1>
-            <p class="subtitle">Web Developer & Future SOC Analyst</p>
-            <p class="bio">
-                I am a student at Sheraton Heliopolis School. I love programming, CSS, HTML, and JavaScript. 
-                Currently, I am learning web development and cybersecurity through the <strong>Digital Egypt Cubs Initiative (DECI)</strong>. 
-                My aspiration is to protect digital assets, build physical tech, and help people as a Security Operations Center (SOC) Analyst.
-            </p>
-            <div class="cta-buttons">
-                <a href="#contact" class="btn primary-btn">Contact Me</a>
-                <a href="#academics" class="btn secondary-btn">View Grades</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Academic Section -->
-    <section id="academics" class="academics-section">
-        <div class="container">
-            <h2>Student Report</h2>
-            <div class="table-wrapper">
-                <table class="grades-table">
-                    <thead>
-                        <tr>
-                            <th>Student Name</th>
-                            <th>Math</th>
-                            <th>Science</th>
-                            <th>English</th>
-                            <th>Average</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Ahmed</strong></td>
-                            <td>88</td>
-                            <td>92</td>
-                            <td>72</td>
-                            <td class="grade-avg">77%</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <p class="section-desc">Have a question or want to collaborate on a security project?</p>
+    <!-- Profile Card Container -->
+    <main class="card-container">
+        <div class="profile-card">
             
-            <form class="portfolio-form" action="https://formspree.io" method="POST">
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" value="marinesp32dev@gmail.com" required>
-                </div>
+            <!-- Avatar Image Slot -->
+            <div class="avatar-box">
+                <img src="photo.png" alt="Martin Profile" class="avatar-img">
+            </div>
 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="country">Country</label>
-                        <select id="country" name="country">
-                            <option value="Egypt" selected>Egypt</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="date">Date to Meet</label>
-                        <input type="date" id="date" name="date">
-                    </div>
-                </div>
+            <!-- Profile Info -->
+            <h1 class="profile-name">Martin</h1>
+            <p class="profile-title">Cybersecurity Specialist & Developer</p>
+            <p class="profile-bio">
+                Passionate about security architecture, threat analysis, and building modern, responsive secure applications.
+            </p>
 
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-                </div>
+            <!-- Action Button -->
+            <a href="mailto:marinesp32dev@gmail.com" class="contact-btn">Contact Me</a>
 
-                <div class="form-checkbox">
-                    <input type="checkbox" id="terms" name="terms" required checked>
-                    <label for="terms">I accept the terms and conditions</label>
-                </div>
+            <!-- Footer Link -->
+            <div class="favorite-link-section">
+                <span class="link-label">Favorite Website</span>
+                <a href="https://deci.gov.eg" target="_blank" class="favorite-url">https://deci.gov.eg</a>
+            </div>
 
-                <div class="form-actions">
-                    <button type="submit" class="btn submit-btn">Send Message</button>
-                    <button type="reset" class="btn reset-btn">Clear Form</button>
-                </div>
-            </form>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>© 2026 Ahmed. Built for Web & Cyber Security Training.</p>
-    </footer>
+    </main>
 
 </body>
 </html>
