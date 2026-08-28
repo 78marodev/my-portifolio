@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./greeting.jsx"; // Imports your component from the other file
+import App from "./App.jsx"; // Imports your component from the other file
 import "./index.css";
 
 createRoot(document.getElementById("root")).render(
